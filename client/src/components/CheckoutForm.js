@@ -22,7 +22,7 @@ const CheckoutForm = (props) => {
   //   setValues({ ...values, [e.target.name]: e.target.value });
   // };
   //form custom hook
-  const [value, handleChanges] = useForm(initialValue) //we are getting useForm from our useForm component
+  const [values, handleChanges] = useForm(initialValue) //we are getting useForm from our useForm component
 
   const handleSubmit = (e) => {
     e.preventDefault();

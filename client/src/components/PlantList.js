@@ -16,9 +16,11 @@ export default class PlantList extends Component {
     axios
       .get("http://localhost:3333/plants")
       .then(response => { //response is the data that's returned from our API call
-      console.log(response.data)
+      console.log(response.data.plantsData)
       //set the returned plants array to this.state.plants
-      this.setState({ plants: response.data })
+      this.setState({ 
+        plants: response.data.plantsData
+       })
       })
       .catch(err => console.error(err));
   }
@@ -27,7 +29,7 @@ export default class PlantList extends Component {
   render() {
     return (
       <main className="plant-list">
-        {this.state?.plants?.map((plant) => (
+        {this.state?.plants?.map((plant) => ( //
           <div className="plant-card" key={plant.id}>
             <img className="plant-image" src={plant.img} alt={plant.name} />
             <div className="plant-details">
