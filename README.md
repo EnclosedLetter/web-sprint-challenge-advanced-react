@@ -59,8 +59,7 @@ componentWillUnmount
 Stateful logic is logic that can be changed.
 
 5. Describe how to test a React component with React Testing Library.
-
-
+You have to target specific things to test and you check if they rendered and if they are doing what they are supposed to be having the test see if they can do the actions a regular user would have to do.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -86,14 +85,14 @@ _Please follow the setup instructions closely so that you can get everything up 
 **Starting the server**
 
 - [x] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [x] Run the server using `npm start`.
+- [x] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [x] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [x] Still inside the `client` folder run `npm run start` to run the client application.
+- [x] Your browser should open up the project as normal
 
 **Starting your test runner**
 
