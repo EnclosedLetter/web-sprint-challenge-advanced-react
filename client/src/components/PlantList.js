@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 //class PlantList extends React.Component {
-export default class PlantList extends Component {
+export default class PlantList extends Component { //preferred
   // add state with a property called "plants" - initialize as an empty array
   constructor(){
     super();
