@@ -29,14 +29,37 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+First you create your clss and extend the react.component base class. Next you will set up the constructor and add state. 
+
+constructor (){
+  super(); // we NEED to call super, otherwise we won't have access to "this"
+  this.state={}; //we are assigning this.state to an object
+}
 
 2. Describe the different phases of the component lifecycle.
+There are 3 phases of the component life cycle. 
+
+Birth/Mounting: This is the first phase of the react cycle, and where we will be building the component from the ground up. Whatever initial data you want accesss to be defined on the constuctor of this of this phase. componentDidMount gets called.
+
+Growth/Updating Phase: In this phase we will be updating component data. setState will be used to change the component's state data, forcing us to call render. You could use shouldComponentUpdate method to stop a component from calling a render if recessary. shouldComponentUpdate makes react go fast, but should only be used if it proved a measurable and perceivable performance improvement.
+//"As you know, deepEquals will be fast on small objects, and slow on heavily nested ones. So this approximation gives us a good rules of thumb: If the value returned by render is teny but props is heavy, shouldComponentUpdate will likely do more harm than good.//
+
+Death/Un-mounting phase: This phase will be removing the component from the screen. componentWillMount is called and can be used for any clean up you may need.
 
 3. Demonstrate an understanding of class component lifecycle methods.
-
+constructor
+render
+componentDidMount
+componentDidUpdate
+componentWillUnmount
+-are all methods in the lifecycle. 
+-Our render() function is the thing that tells react what will be mounted to the screen.
+-if you wanted to receive props, you could pass them here in the constuctor(props). However, if you pass props constructor(props), you must also pass them in super(props) .
 4. Define stateful logic.
+Stateful logic is logic that can be changed.
 
 5. Describe how to test a React component with React Testing Library.
+You have to target specific things to test and you check if they rendered and if they are doing what they are supposed to be having the test see if they can do the actions a regular user would have to do.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -54,27 +77,27 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Basic set up**
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 **Starting the server**
 
-- [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [x] Run `npm install` to download dependencies for the server.
+- [x] Run the server using `npm start`.
+- [x] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [x] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [x] Still inside the `client` folder run `npm run start` to run the client application.
+- [x] Your browser should open up the project as normal
 
 **Starting your test runner**
 
-- [ ] In the final terminal window, make sure you are in the `client` folder still
-- [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
+- [x] In the final terminal window, make sure you are in the `client` folder still
+- [x] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
 
 **Commit and Push OFTEN!**
 
